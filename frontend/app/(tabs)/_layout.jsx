@@ -5,7 +5,6 @@ import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 
 export default function Layout() {
-  // Define our theme colors in one place for easy updating
   const theme = {
     background: "#0f1924",
     surface: "#182635",
@@ -23,12 +22,12 @@ export default function Layout() {
           tabBarShowLabel: true,
           tabBarStyle: {
             height: 70,
-            backgroundColor: "#ffffff", // Changed for light theme
+            backgroundColor: "#0f1924", // Changed to match bg-background
             borderTopWidth: 0,
             paddingVertical: 10,
             paddingHorizontal: 12,
-            shadowColor: "#ccc", // Lighter shadow for light theme
-            shadowOpacity: 0.1,
+            shadowColor: "#000",
+            shadowOpacity: 0.2,
             shadowOffset: { width: 0, height: -2 },
             shadowRadius: 4,
             elevation: 5,
@@ -38,8 +37,8 @@ export default function Layout() {
             fontWeight: "500",
             marginBottom: 8,
           },
-          tabBarInactiveTintColor: "#8e8e93", // Updated tint for light theme
-          tabBarActiveTintColor: "#000", // Updated active tint to black
+          tabBarInactiveTintColor: "#8b9eb5", // Changed to match inactive color
+          tabBarActiveTintColor: "#00ffcc", // Changed to primary color
           tabBarItemStyle: {
             marginHorizontal: 10,
           },
@@ -50,7 +49,7 @@ export default function Layout() {
           tabBarInactiveBackgroundColor: "transparent",
         }}
       >
-        {/* Home Tab */}
+        {/* Update the active background color in each tab */}
         <Tabs.Screen
           name="home"
           options={{
@@ -58,8 +57,8 @@ export default function Layout() {
               <View
                 style={{
                   backgroundColor:
-                    color === "#000"
-                      ? "rgba(0, 0, 0, 0.1)"
+                    color === "#00ffcc"
+                      ? "rgba(0, 255, 204, 0.1)"
                       : "transparent",
                   borderRadius: 10,
                   padding: 4,
@@ -162,7 +161,7 @@ export default function Layout() {
           }}
         />
       </Tabs>
-      <StatusBar backgroundColor="#ffffff" style="dark" />
+      <StatusBar backgroundColor="#0f1924" style="light" />
     </>
   );
 }
