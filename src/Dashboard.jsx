@@ -14,7 +14,7 @@ function Dashboard() {
       </nav>
 
       <section className="welcome-section">
-        <h1>Welcome back, Student!</h1>
+        <h1>Welcome back, Dear Student!</h1>
         <p>Continue your learning journey. You're making great progress!</p>
       </section>
 
